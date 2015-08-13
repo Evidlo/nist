@@ -1,4 +1,4 @@
-http://www.nxp.com/documents/data_sheet/74F138.pdf#define P10A 14
+#define P10A 14
 #define P10C 15
 #define P9A 16
 #define P9C 17
@@ -154,12 +154,12 @@ void loop(){
   while(Serial.available()){
     Serial.read();
     clock();
-
     Serial.print(read_counter());
     Serial.print('\t');
     enable_eeprom_out();
     Serial.print(read_parallel());
     Serial.println();
+    enable_eeprom_out();
     
   }
 
